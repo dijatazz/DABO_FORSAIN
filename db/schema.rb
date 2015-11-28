@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005065938) do
+ActiveRecord::Schema.define(version: 20151128001346) do
 
   create_table "beers", force: true do |t|
     t.string   "name"
@@ -19,6 +19,55 @@ ActiveRecord::Schema.define(version: 20151005065938) do
     t.integer  "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dishes", force: true do |t|
+    t.string  "name"
+    t.integer "recipe_id"
+  end
+
+  create_table "ingredient_recipes", force: true do |t|
+    t.integer  "unity_id"
+    t.integer  "ingredient_id"
+    t.integer  "recipe_id"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ingredients", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "recipes", force: true do |t|
+    t.integer  "dish_id"
+    t.string   "name"
+    t.string   "description"
+    t.integer  "people_nb"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "unities", force: true do |t|
+    t.string   "unity_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
 end

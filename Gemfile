@@ -38,4 +38,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "haml"
+gem 'haml', '~> 4.0', '>= 4.0.7'
+
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+
+gem 'paperclip', '~> 4.3', '>= 4.3.2'
