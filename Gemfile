@@ -43,3 +43,5 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
+
+gem 'foreigner', '~> 1.7', '>= 1.7.4'
