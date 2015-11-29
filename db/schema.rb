@@ -11,64 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151128030238) do
+ActiveRecord::Schema.define(version: 20151128162221) do
 
-  create_table "beers", force: true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "note"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "categories", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "dishes", force: true do |t|
-    t.string  "name"
-    t.integer "recipe_id"
-    t.integer "category_id"
-  end
-
-  create_table "ingredient_recipes", force: true do |t|
-    t.integer  "unity_id"
-    t.integer  "ingredient_id"
-    t.integer  "recipe_id"
-    t.integer  "quantity"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "ingredients", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "recipes", force: true do |t|
-    t.integer  "dish_id"
-    t.string   "name"
-    t.string   "description"
-    t.integer  "people_nb"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "unities", force: true do |t|
-    t.string   "unity_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", force: true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "crypted_password"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+  create_table "todos", force: :cascade do |t|
+    t.string   "title"
+    t.text     "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
