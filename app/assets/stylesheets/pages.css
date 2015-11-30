@@ -1,0 +1,17 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.jumbotron {
+	
+	background-image: url("/assets/food-wallpaper.jpg");
+	background-repeat: no-repeat;
+	background-position: 30% 60%;
+}
