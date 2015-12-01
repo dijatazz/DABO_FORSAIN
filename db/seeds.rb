@@ -8,6 +8,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Filled Ingredients TABLE
+Ingredient.delete_all
 Ingredient.create(name: "Abadèche")
 Ingredient.create(name: "Abondance")
 Ingredient.create(name: "Abricot")
@@ -2053,6 +2054,7 @@ Ingredient.create(name: "Yet")
 Ingredient.create(name: "Yuzu")
 
 #Filled Country TABLE
+Country.delete_all
 Country.create(name: "Sénégal")
 Country.create(name: "Maroc")
 Country.create(name: "Cameroun")
@@ -2075,3 +2077,23 @@ Country.create(name: "Nouvelle Zelande")
 Country.create(name: "Palaos")
 
 #Filled Unity TABLE
+Unity.delete_all
+Unity.create(name: "Kilogramme", symbole: "kg")
+Unity.create(name: "Gramme", symbole: "g")
+Unity.create(name: "Millilitre", symbole: "ml")
+Unity.create(name: "Centilitre", symbole: "cl")
+Unity.create(name: "Décalitre", symbole: "dl")
+Unity.create(name: "Litre", symbole: "l")
+Unity.create(name: "Tasse", symbole: "c")
+Unity.create(name: "Cuillerée à soupe", symbole: "Tbs")
+Unity.create(name: "Cuillerée à café", symbole: "tsp")
+
+#Filled Category TABLE
+Category.delete_all
+Category.create(name: "Entrée")
+Category.create(name: "Plat principal")
+Category.create(name: "Dessert")
+Category.create(name: "Accompagnement")
+Category.create(name: "Apéritif")
+Category.create(name: "Sauce")
+Category.create(name: "Boisson")

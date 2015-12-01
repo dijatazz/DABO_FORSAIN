@@ -1,20 +1,20 @@
-Sénégal -> Yassa Poulet
-Maroc -> Tajine de poulet aux épices
-Cameroun -> Poulet DG
-Côte d'ivoire -> Poulet Katoum
-France -> quiche lorraine
-Espagne -> Paella
-Grèce -> Moussaka
-Angleterre -> Fish and chips
-Argentine -> Empanadas
-Mexique -> Poulet mexicain aux haricots noirs
-Etas-Unis
-Chili -> Chili con carne
-Chine -> Riz cantonais
-Japon
-Inde
-Afghanistan
-Australie
-Nouvelle Guinée
-Nouvelle Zelande
-Palaos
+Country.create(name: "Sénégal")
+Country.create(name: "Maroc")
+Country.create(name: "Cameroun")
+Country.create(name: "Côte d'ivoire")
+Country.create(name: "France")
+Country.create(name: "Espagne")
+Country.create(name: "Grèce")
+Country.create(name: "Angleterre")
+Country.create(name: "Argentine")
+Country.create(name: "Mexique")
+Country.create(name: "Etas-Unis")
+Country.create(name: "Chili")
+Country.create(name: "Chine")
+Country.create(name: "Japon")
+Country.create(name: "Inde")
+Country.create(name: "Afghanistan")
+Country.create(name: "Australie")
+Country.create(name: "Nouvelle Guinée")
+Country.create(name: "Nouvelle Zelande")
+Country.create(name: "Palaos")

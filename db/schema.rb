@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201130936) do
+ActiveRecord::Schema.define(version: 20151201221548) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,23 @@ ActiveRecord::Schema.define(version: 20151201130936) do
 
   add_index "categories", ["id"], name: "index_categories_on_id"
 
+  create_table "comments", force: :cascade do |t|
+    t.text     "comment"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["id"], name: "index_comments_on_id"
+
+  create_table "costs", force: :cascade do |t|
+    t.string   "cost_level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "costs", ["id"], name: "index_costs_on_id"
+
   create_table "countries", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -29,11 +46,21 @@ ActiveRecord::Schema.define(version: 20151201130936) do
 
   add_index "countries", ["id"], name: "index_countries_on_id"
 
+  create_table "difficulties", force: :cascade do |t|
+    t.string   "difficulty_level"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "difficulties", ["id"], name: "index_difficulties_on_id"
+
   create_table "dishes", force: :cascade do |t|
     t.string   "name"
     t.integer  "recipe_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "cost_id"
+    t.integer  "difficulty_id"
   end
 
   add_index "dishes", ["id"], name: "index_dishes_on_id"
@@ -77,6 +104,7 @@ ActiveRecord::Schema.define(version: 20151201130936) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "symbole"
   end
 
   add_index "unities", ["id"], name: "index_unities_on_id"
