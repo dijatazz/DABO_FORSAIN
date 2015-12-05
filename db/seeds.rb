@@ -8,7 +8,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Filled Ingredients TABLE
-Ingredient.delete_all
 Ingredient.create(name: "Abadèche")
 Ingredient.create(name: "Abondance")
 Ingredient.create(name: "Abricot")
@@ -2077,7 +2076,6 @@ Country.create(name: "Nouvelle Zelande")
 Country.create(name: "Palaos")
 
 #Filled Unity TABLE
-Unity.delete_all
 Unity.create(name: "Kilogramme", symbole: "kg")
 Unity.create(name: "Gramme", symbole: "g")
 Unity.create(name: "Millilitre", symbole: "ml")
@@ -2089,7 +2087,6 @@ Unity.create(name: "Cuillerée à soupe", symbole: "Tbs")
 Unity.create(name: "Cuillerée à café", symbole: "tsp")
 
 #Filled Category TABLE
-Category.delete_all
 Category.create(name: "Entrée")
 Category.create(name: "Plat principal")
 Category.create(name: "Dessert")
@@ -2097,3 +2094,27 @@ Category.create(name: "Accompagnement")
 Category.create(name: "Apéritif")
 Category.create(name: "Sauce")
 Category.create(name: "Boisson")
+
+#Filled Cost Table
+Cost.create(cost_level: 1)
+Cost.create(cost_level: 2)
+Cost.create(cost_level: 3)
+
+#Filled Difficulty Table
+Difficulty.create(difficulty_level: 1)
+Difficulty.create(difficulty_level: 2)
+Difficulty.create(difficulty_level: 3)
+
+# Riz cantonnais
+Dish.create(name: "Riz cantonnais", cost_id: 1, difficulty_id: 1, bake_time: 15, preparation_time: 10, number_people: 4, category_id: 2, country_id: 13)
+Recipe.create(dish_id: 1, description: "Quaedam non disiungitur fractis ambo filius post constaret ut et multorum suam Crateras mandatum mandatum nulla dilatata ad fractis in.")
+IngredientRecipe.create(unity_id: 2, ingredient_id: 1647, recipe_id: 1, quantity: 240)
+IngredientRecipe.create(unity_id: 2, ingredient_id: 539, recipe_id: 1, quantity: 240)
+IngredientRecipe.create(unity_id: nil, ingredient_id: 949, recipe_id: 1, quantity: 2)
+IngredientRecipe.create(unity_id: nil, ingredient_id: 1270, recipe_id: 1, quantity: 4)
+IngredientRecipe.create(unity_id: 2, ingredient_id: 1440, recipe_id: 1, quantity: 100)
+IngredientRecipe.create(unity_id: 2, ingredient_id: 1430, recipe_id: 1, quantity: nil)
+IngredientRecipe.create(unity_id: 8, ingredient_id: 938, recipe_id: 1, quantity: 1)
+IngredientRecipe.create(unity_id: 8, ingredient_id: 939, recipe_id: 1, quantity: 2)
+IngredientRecipe.create(unity_id: nil, ingredient_id: 1808, recipe_id: 1, quantity: nil)
+IngredientRecipe.create(unity_id: 2, ingredient_id: 1507, recipe_id: 1, quantity: nil)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201221548) do
+ActiveRecord::Schema.define(version: 20151202234043) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -56,11 +56,15 @@ ActiveRecord::Schema.define(version: 20151201221548) do
 
   create_table "dishes", force: :cascade do |t|
     t.string   "name"
-    t.integer  "recipe_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "cost_id"
     t.integer  "difficulty_id"
+    t.integer  "bake_time"
+    t.integer  "preparation_time"
+    t.integer  "number_people"
+    t.integer  "category_id"
+    t.integer  "country_id"
   end
 
   add_index "dishes", ["id"], name: "index_dishes_on_id"
@@ -84,9 +88,7 @@ ActiveRecord::Schema.define(version: 20151201221548) do
 
   create_table "recipes", force: :cascade do |t|
     t.integer  "dish_id"
-    t.string   "name"
     t.text     "description"
-    t.integer  "people_nb"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

@@ -46,5 +46,7 @@ group :development do
 
   gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
   gem 'autoprefixer-rails'
+
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
 end
 
