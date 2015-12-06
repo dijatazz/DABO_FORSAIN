@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202234043) do
+ActiveRecord::Schema.define(version: 20151205120232) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -40,8 +40,9 @@ ActiveRecord::Schema.define(version: 20151202234043) do
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "description"
   end
 
   add_index "countries", ["id"], name: "index_countries_on_id"

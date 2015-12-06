@@ -3,26 +3,37 @@
   They will automatically be included in application.css.
 */
 
+* {
+padding: 0;
+margin: 0;
+}
+
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
 }
 
 .jumbotron {
-	
+
 	background-image: url("/assets/food-wallpaper.jpg");
 	background-repeat: no-repeat;
 	background-position: 30% 60%;
 }
 
-.jumbotron .container h1, .jumbotron .container .text-info{
+#jumbo {
+	margin-bottom: 0px;
+}
+
+.jumbotron .container h1, .jumbotron .container .text-info, #myCarousel .carousel-inner .item .container .carousel-caption .row .col-lg-4 h2, #myCarousel .carousel-inner .item .container .carousel-caption .row .col-lg-4 p {
 	
 	color: white;
 	text-shadow: 2px 2px 4px #000000;
 	font-family: "Arial Black", Arial, Verdana, sans-serif;
 }
 
-/* In our demo, the footers are fixed to the bottom of the page */
+
+
+/* The footers are fixed to the bottom of the page */
 
 footer{
 	position: fixed;
@@ -79,11 +90,6 @@ footer{
   height: 500px;
   margin-bottom: 60px;
 }
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
-
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
@@ -127,4 +133,20 @@ footer{
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
+}
+
+#myCarousel .carousel-inner .item
+{
+	background-color: white;
+}
+
+#myCarousel
+{
+	margin-bottom: 0;
+}
+
+#line-separator
+{
+	color: black;
+	margin-top: 0;
 }
