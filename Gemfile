@@ -48,5 +48,7 @@ group :development do
   gem 'autoprefixer-rails'
 
   gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
+
+  gem 'devise', '~> 3.5', '>= 3.5.2'
 end
 
