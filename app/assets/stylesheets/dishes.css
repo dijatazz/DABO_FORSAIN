@@ -2,3 +2,75 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+#wrapper
+{
+	margin-right:  50px;
+	margin-left:  50px;
+}
+
+#center_titre_recettes, #center_texte_recettes
+{
+	text-align: center;
+}
+
+#bloc_cnt
+{
+	border-bottom: 1px dotted #b2b2b2;
+}
+
+#line-separator-recettes
+{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#line-separator-recettes-2
+{
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.well {
+    background-image: linear-gradient(to bottom, #e8e8e8 0px, #f5f5f5 100%);
+    background-repeat: repeat-x;
+    border-color: #dcdcdc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+#formulaire_recettes
+{
+	margin-right: 450px;
+}
+
+.texte {
+   
+   position: absolute;
+   top: 35px;
+   left: 210px;
+   
+   padding-left: 10px;
+   background: #fff none repeat scroll 0 0;
+}
+
+.visuel
+{
+	display: inline-block;
+}
+
+.bloc_listing_dishes
+{
+	display: block;
+	position: relative;
+	margin: 0 0 30px;
+}
+
+.liste_infos
+{
+	list-style-type:none;
+	padding: 0;
+}
+
+.liste_infos li strong
+{
+	color: #f60;
+}

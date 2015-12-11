@@ -2,3 +2,15 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+#main-container
+{
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+#line-separator-signup
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

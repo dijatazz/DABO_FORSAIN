@@ -6,12 +6,20 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 
-    <!-- Custom styles for this template -->
-    <%= stylesheet_link_tag "welcome" %>
   </head>
   <body>
     
     <%= render "layouts/header"%>
+      <% if notice %>
+        <p class="alert alert-success">
+          <%= notice %>
+        </p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger">
+          <%= alert %>
+        </p>
+      <% end %>
       <%= yield %>
     <%= render "layouts/footer"%>
 

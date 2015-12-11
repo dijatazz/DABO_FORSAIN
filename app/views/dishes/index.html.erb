@@ -1,0 +1,108 @@
+<div id="wrapper">
+	<div class="bloc_recettes">
+
+		<h1 id="center_titre_recettes">Recettes</h1>
+
+		<p id="center_texte_recettes"> En manque d’idées menu ? Apéritifs, entrées, plats, desserts, boissons… Cookingmamamia vous propose, gratuitement, près de 4 000 recettes. A vos fourneaux ! </p>
+		
+		<hr class="featurette-divider" id="line-separator-recettes">
+
+		<div class="row">
+			<div class="col-md-4">Recettes <%= Category.find(1).name.downcase %></div>
+			<div class="col-md-4">Recettes <%= Category.find(2).name.downcase %></div>
+			<div class="col-md-4">Recettes <%= Category.find(3).name.downcase %></div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">Recettes <%= Category.find(4).name.downcase %></div>
+			<div class="col-md-4">Recettes <%= Category.find(5).name.downcase %></div>
+			<div class="col-md-4">Recettes <%= Category.find(6).name.downcase %></div>
+		</div>
+		Recettes <%= Category.find(6).name.downcase %>
+		<hr class="featurette-divider" id="line-separator-recettes-2">
+		
+		<div class="well">
+			<h1>Rechercher une recette</h1>
+			<form id="formulaire_recettes">
+
+			 	<div class = "form-group">
+			      <label for = "name">Type de plat :</label>
+					<select class="form-control">
+		      			<% @categories.each do |categorie| %>
+		       					<option><%= categorie.name %></option>
+		       			<% end %>
+	      			</select>
+			   </div>
+			   <div class="row">
+			   		<div class="col-md-4">
+			   			<div class = "checkbox">
+			   				Difficulté:
+				      		<label class="checkbox-inline"><input type = "checkbox">
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				      		</label>
+				      		<label class="checkbox-inline"><input type = "checkbox">
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				      		</label>
+				      		<label class="checkbox-inline"><input type = "checkbox">
+				      			<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				      			<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				      			<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				      		</label>
+				   		</div>
+			   		</div>
+			   		<div class="col-md-4">
+			   			<div class = "checkbox">
+			   				Budget:
+				      		<label class="checkbox-inline"><input type = "checkbox">
+								<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+				      		</label>
+				      		<label class="checkbox-inline"><input type = "checkbox">
+								<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+								<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+				      		</label>
+				      		<label class="checkbox-inline"><input type = "checkbox">
+				      			<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+				      			<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+				      			<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+				      		</label>
+				   		</div>
+			   		</div>
+			   		<div class="col-md-4">
+			   			<button type = "submit" class = "btn btn-default">Rechercher	</button>
+			   		</div>
+			   </div> 
+			</form>
+		</div>
+
+		<hr class="featurette-divider" id="line-separator-recettes-2">
+		<h1><%= @dishes.count %> recettes </h1>
+		<% @dishes.each do |dish| %>
+			<div class="bloc_listing_dishes">
+				<div class="visuel">
+					<img src="/assets/dishes/<%=dish.id%>" alt="" class="img-thumbnail" height="200" width="236"/>
+				</div>
+				<div class="texte">
+					<div class="titre">
+						<h3><%= dish.name %></h3>
+					</div>
+					<div class="infos">
+						<ul class="liste_infos">
+							<li><strong>Préparation :</strong> <%= dish.preparation_time %> mins</li>
+							<li><strong>Type de plat : </strong><%= dish.category.name %></li>
+							<li><strong>Difficulté :</strong>
+								<% for i in 1 .. dish.difficulty_id %>
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								<% end %>
+								- <strong>Coût :</strong>
+								<% for i in 1 .. dish.cost_id %>
+									<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+								<% end %>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>

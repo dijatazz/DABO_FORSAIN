@@ -17,7 +17,9 @@
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Se connecter</button>
+            <<!-- button type="submit" class="btn btn-success">Se connecter</button> -->
+            <%= link_to "Se connecter",  new_user_session_path , class: "btn btn-success" %>
+            <%= link_to "S'inscrire", new_user_registration_path , class: "btn btn-info" %>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -26,6 +28,6 @@
   <div class="container text-center">
     <h1>Recettes de cuisine</h1>
     <p class = "text-info">Recettes de saison, recettes par pays... Des inspirations pour toutes les envies !</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Nos recettes &raquo;</a></p>
+    <p><%= link_to "Nos recettes >>", dishes_path , class: "btn btn-primary btn-lg" %></p>
   </div>
 </div>
