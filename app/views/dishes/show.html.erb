@@ -1,0 +1,45 @@
+<div id="wrapper">
+	<div class="bloc_recettes">
+		
+		<%= render "layouts/form" %>
+
+		<div class="bloc_cnt">
+			<div class="en_entete">
+				<div class="visuel">
+					<img src="/assets/dishes/<% @dish.id %>.jpg" height="277" width="326" title="<% @dish.name %>" alt="<% @dish.name %>">
+				</div>
+				<div class="titre">
+					<h1><%= @dish.name %>/h1>
+				</div>
+			</div>
+			<div class="description">
+				<h3><%= @dish.description %></h3>
+			</div>
+			<div class="infos_liste">
+				<div class="row">
+					<div class="col-md-6">Prix : </div>
+					<div class="col-md-6">Difficulté : </div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">Temps de préparation : </div>
+					<div class="col-md-4">Temps de cuisson : </div>
+					<div class="col-md-4">Type de plat : </div>
+				</div>
+			</div>
+			
+			<div class="ingredients">
+				<ul></ul>
+			</div>
+
+			<div class="preparation">
+				
+			</div>
+
+		</div>
+
+		<div class="bloc_reagir_plat">
+			
+		</div>
+
+	</div>
+</div>

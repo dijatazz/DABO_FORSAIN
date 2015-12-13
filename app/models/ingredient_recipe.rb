@@ -1,5 +1,5 @@
 class IngredientRecipe < ActiveRecord::Base
-	belongs_to :recipie
+	belongs_to :recipe
 	belongs_to :unity
 	belongs_to :ingredient
 end

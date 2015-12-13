@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   
+  
+  get     '/pages/home'       =>    'pages#home'
+  get     '/dishes'           =>    'dishes#index'
+  get     '/dishes/show'      =>    'dishes#show'
+  get     '/dishes/show/:id'  =>    'dishes#show'
   devise_for :admins
-  get     '/pages/home'     =>    'pages#home'
-  get     '/dishes'         =>    'dishes#index'
-  get     '/dishes/show'    =>    'dishes#show'
   devise_for :users
 
 
