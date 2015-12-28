@@ -33,7 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'rails_12factor', group: :production
-gem 'devise', '~> 3.5', '>= 3.5.2', group: :production
+gem 'devise', '~> 3.5', '>= 3.5.2'
 
 ruby "2.0.0"
 
