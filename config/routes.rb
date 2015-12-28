@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   
   get     '/pages/home'       =>    'pages#home'
   get     '/dishes'           =>    'dishes#index'
-  get     '/dishes/show'      =>    'dishes#show'
   get     '/dishes/show/:id'  =>    'dishes#show'
+  get     '/dishes/show'      =>    'dishes#show'
   devise_for :admins
   devise_for :users
 

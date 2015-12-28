@@ -70,7 +70,27 @@
 	padding: 0;
 }
 
-.liste_infos li strong
+.liste_infos li strong, .infos_liste li strong
 {
 	color: #f60;
+}
+
+.infos_liste ul
+{
+	margin-top: 60px;
+}
+
+.infos_liste ul li
+{
+	font-size: 100%
+}
+
+.titre_show {
+   
+   position: absolute;
+   top: 90px;
+   left: 300px;
+   
+   padding-left: 10px;
+   background: #fff none repeat scroll 0 0;
 }

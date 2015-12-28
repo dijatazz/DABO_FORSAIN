@@ -11,15 +11,15 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <<!-- button type="submit" class="btn btn-success">Se connecter</button> -->
-            <%= link_to "Se connecter",  new_user_session_path , class: "btn btn-success" %>
-            <%= link_to "S'inscrire", new_user_registration_path , class: "btn btn-info" %>
+            <% if user_signed_in? %>
+              <<!-- button type="submit" class="btn btn-success">Se connecter</button> -->
+              Connecté en tant que <strong><%= current_user.email %></strong>.
+              <%= link_to "Editer profil", edit_user_registration_path, class: "btn btn-warning" %>
+              <%= link_to "Se déconnecter", destroy_user_session_path, class: "btn btn-danger" %>
+            <% else %>
+              <%= link_to "Se connecter",  new_user_session_path , class: "btn btn-success" %>
+              <%= link_to "S'inscrire", new_user_registration_path , class: "btn btn-info" %>
+            <% end %>
           </form>
         </div><!--/.navbar-collapse -->
       </div>

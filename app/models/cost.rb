@@ -1,3 +1,3 @@
 class Cost < ActiveRecord::Base
-	belongs_to :dish
+	has_many :dishes
 end

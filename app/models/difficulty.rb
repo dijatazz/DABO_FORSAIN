@@ -1,3 +1,3 @@
 class Difficulty < ActiveRecord::Base
-	belongs_to :dish
+	has_many :dishes
 end

@@ -2,44 +2,114 @@
 	<div class="bloc_recettes">
 		
 		<%= render "layouts/form" %>
+		
+		<hr class="featurette-divider" id="line-separator-recettes-2">
 
+		<!-- DIV BLOC CONTAINER -->
 		<div class="bloc_cnt">
-			<div class="en_entete">
-				<div class="visuel">
-					<img src="/assets/dishes/<% @dish.id %>.jpg" height="277" width="326" title="<% @dish.name %>" alt="<% @dish.name %>">
-				</div>
-				<div class="titre">
-					<h1><%= @dish.name %>/h1>
-				</div>
-			</div>
-			<div class="description">
-				<h3><%= @dish.description %></h3>
-			</div>
-			<div class="infos_liste">
+			<!-- BOOTSTRAP PROPERTIES -->
+			<div class="container">
 				<div class="row">
-					<div class="col-md-6">Prix : </div>
-					<div class="col-md-6">Difficulté : </div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">Temps de préparation : </div>
-					<div class="col-md-4">Temps de cuisson : </div>
-					<div class="col-md-4">Type de plat : </div>
+					<div class="col-md-6">
+						<!-- IMAGE +  TITRE PLAT-->
+						<div class="en_entete">
+							<div class="visuel">
+								<img src="/assets/dishes/<%=@dish.id%>.jpg" height="277" width="326" title="<%@dish.name %>" alt="<% @dish.name %>" class="img-thumbnail"/>
+							</div>
+							<div class="titre_show">
+								<h1><%= @dish.name %></h1>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<!-- INFOS PLAT -->
+						<div class="infos_liste">
+							<ul>
+								<li><strong>Prix : </strong>
+									<% for i in 1 .. @dish.cost_id %>
+										<span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+									<% end %>
+								</li>
+								<li><strong>Difficulté : </strong>
+									<% for i in 1 .. @dish.difficulty_id %>
+										<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+									<% end %>
+								</li>
+								<li><strong>Type de plat : </strong><%=@dish_category[0].name%></li>
+								<li><strong>Pour : </strong><%=@dish.number_people%> personnes</li>
+								<li><strong>Temps de préparation : </strong><%=@dish.preparation_time %> mins</li>
+								<li><strong>Temps de cuisson : </strong><%=@dish.bake_time %> mins</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 			
-			<div class="ingredients">
-				<ul></ul>
+			<!-- BOOTSTRAP PROPERTIES -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<!-- INGREDIENTS -->
+						<div class="ingredients">
+							<div class="recette_titre">
+								<h2>Ingrédients :</h2>
+							</div>
+							<div class="cnt">
+								<ul>
+									<% @ingredients.each do |ingredient| %>
+										<li><span><%= ingredient.i_name %></span></li>
+									<% end %>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<!-- PREPARATION -->
+						<div class="preparation">
+							<div class="recette_titre">
+								<h2>Préparation :</h2>
+							</div>
+							<div class="cnt">
+								<p><%= @recipe.description %></p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-
-			<div class="preparation">
-				
-			</div>
-
 		</div>
 
+		<hr class="featurette-divider" id="line-separator-recettes-2">
+		
+		<!-- BLOC COMMENTAIRES -->
 		<div class="bloc_reagir_plat">
-			
+			<div class="container">
+			    <div class="col-lg-4 col-sm-6 text-center">
+			    <div class="well">
+			        <h4>Qu'en pensez-vous ?</h4>
+				    <div class="input-group">
+				        <input type="text" id="userComment" class="form-control input-sm chat-input" placeholder="Write your message here..." />
+					    <span class="input-group-btn" onclick="addComment()">     
+				            <a href="#" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-comment"></span> Add Comment</a>
+				        </span>
+				    </div>
+				    <hr data-brackets-id="12673">
+				    <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
+				        <strong class="pull-left primary-font">James</strong>
+				        <small class="pull-right text-muted">
+				           <span class="glyphicon glyphicon-time"></span>7 mins ago</small>
+				        </br>
+				        <li class="ui-state-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>
+				        </br>
+				        <strong class="pull-left primary-font">Taylor</strong>
+				        <small class="pull-right text-muted">
+				           <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+				        </br>
+				        <li class="ui-state-default">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+				        
+				    </ul>
+			    </div>
+				</div>
+			</div>
 		</div>
-
 	</div>
 </div>

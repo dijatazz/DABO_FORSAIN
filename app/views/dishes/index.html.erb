@@ -8,7 +8,8 @@
 		<% @dishes.each do |dish| %>
 			<div class="bloc_listing_dishes">
 				<div class="visuel">
-					<img src="/assets/dishes/<%=dish.id%>" alt="" class="img-thumbnail" height="200" width="236"/>
+					<!-- <img src="/assets/dishes/<%=dish.id%>" alt="" class="img-thumbnail" height="200" width="236"/> -->
+					<%= link_to image_tag("dishes/#{dish.id}.jpg", :height => 200, :width => 236, :class => "img-thumbnail"), {:action => 'show', :controller => 'dishes', :id => dish.id }%>
 				</div>
 				<div class="texte">
 					<div class="titre">
