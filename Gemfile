@@ -33,6 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'rails_12factor', group: :production
+gem 'devise', '~> 3.5', '>= 3.5.2', group: :production
 
 ruby "2.0.0"
 
@@ -52,7 +53,5 @@ group :development do
   gem 'autoprefixer-rails'
 
   gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
-
-  gem 'devise', '~> 3.5', '>= 3.5.2'
 
 end
