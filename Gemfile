@@ -34,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rails_12factor', group: :production
 gem 'devise', '~> 3.5', '>= 3.5.2'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 ruby "2.0.0"
 
@@ -49,7 +50,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+ 
   gem 'autoprefixer-rails'
 
   gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
