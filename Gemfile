@@ -50,6 +50,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  gem 'sqlite3', '~> 1.3', '>= 1.3.11'
  
   gem 'autoprefixer-rails'
 
