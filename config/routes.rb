@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  route to:    'pages#home'
+  root    'pages#home'
   get     '/pages/home'       =>    'pages#home'
   get     '/dishes'           =>    'dishes#index'
   get     '/dishes/show/:id'  =>    'dishes#show'
